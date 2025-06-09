@@ -1,0 +1,112 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color:   #681714; 
+  margin: 0;
+  padding: 0;
+}
+
+.book {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border: 3px solid #BF3131;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.page {
+  display: none;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: none; 
+  z-index: 2;
+}
+
+.page.active {
+  display: block;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+  color:  #000000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p, textarea {
+  font-size: 1.1em;
+  color: #000000;
+  line-height: 2.0;
+}
+
+textarea {
+  width: 100%;
+  min-height: 80px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+button {
+  background-color:#7D0A0A;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  margin: 10px 5px 0 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color:   #BF3131;
+}
+
+button:focus {
+  outline: none;
+}
+
+.highlightable:hover {
+  background-color: #fff0b3;
+  cursor: pointer;
+}
+
+.highlightable.highlighted {
+  background-color: #ffe07a;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+  .book {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  h1, h2 {
+    font-size: 1.4em;
+  }
+
+  textarea {
+    font-size: 1em;
+  }
+}
+

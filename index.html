@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Constitution of Kinder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="https://kiwihellas.gr/wp-content/uploads/2022/09/Kiwi-Hellas-Slider-Main-Kiwi.png">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("mq4ALDpALenJdgI-H"); 
+  </script>
+</head>
+<body>
+  <div class="book">
+    <div class="page active" id="page1">
+      <h1>The Constitution of Kinder</h1>
+      <p class="intro">Our little love treaty. Soft, certain, and just ours.</p>
+      <button onclick="nextPage()">→</button>
+    </div>
+
+  
+    <div class="page" id="page2">
+      <h2>Bill of Rights</h2>
+      <ul>
+        <li>Amendment I – The Right to Be Loved Unconditionally. </li>
+        <li>Amendment II – The Right to Be Heard.</li>
+        <li>Amendment III – The Right to Comfort and Warmth.</li>
+        <li>Amendment IV –  The Right to Be Adored Endlessly.</li>
+      </ul>
+      <p>Kiwi's Amendment:</p>
+      <textarea id="herAmendment" placeholder="Amendment V – Unlimited forehead kisses before exams"></textarea>
+      <button onclick="saveAmendment()">Save Amendment</button>     
+      <button onclick="clearAmendment()" style="margin-left: 10px;">Clear</button>
+      <p id="savedAmendment"></p>
+      <button onclick="prevPage()">←</button>
+      <button onclick="nextPage()">→</button>
+    </div>
+
+    <div class="page" id="page3">
+      <h2>Case Studies</h2>
+      <ul id="caseList">
+        <li><strong>Kiwi v. Coffee Withdrawal:</strong> Drink coffee in the morning only. No more nighttime caffeine.</li>
+        <li><strong>Kiwi v Study Breaks:</strong> Study breaks and rest are now mandatory. Pushing beyond limits is no longer allowed, even “just one more chapter.”</li>
+      </ul>
+      <p>Add a new Case Study:</p>
+      <textarea id="newCase" placeholder="Kiwi v. Eepy Time – cuddles mandated at 10PM"></textarea>
+      <button onclick="addCase()">Add Case</button>
+      <button onclick="prevPage()">←</button>
+      <button onclick="nextPage()">→</button>
+    </div>
+
+    <div class="page" id="page4">
+      <h2>Declaration of Interdependence</h2>
+      <p class="highlightable">I pledge the softest parts of me—the tired, the hopeful, the still-learning parts. Through everything, I want you and only you. And every single day, I will always choose you.</p>
+      <button onclick="prevPage()">←</button>
+      <button onclick="nextPage()">→</button>
+    </div>
+
+<div class="page" id="page5">
+  <h2>Glossary of Cute Terms</h2>
+  
+  <p>
+    <strong>Kiwi</strong> (n.)<br>
+    <small class="description">
+      Literally perfect, amazing, talented, world-class, hardworking, passionate. Often found conquering books, sipping coffee, and stealing beans' heart without even trying.
+  </p>
+  
+  <p>
+    <strong>Beans</strong> (n.)<br>
+    <small class="description">
+   Kiwi’s simp, loyal dog, loving babyboy, devoted slave, and forever hubby.
+    </small>
+  </p>
+  
+  <button onclick="prevPage()">←</button>
+  <button onclick="nextPage()">→</button>
+</div>
+
+<style>
+  .description {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+    display: block;
+    max-width: 400px;
+  }
+</style>
+
+
+    <div class="page" id="page6">
+      <h2>Ratified Forever</h2>
+      <p>Signed with all my langga langga. To my one and only wife. 💘</p>
+      <p class="sign">– Your Pupbeans 🐾</p>
+      <p>Write your own ratification message, my love:</p>
+      <form id="ratifyForm">
+        <textarea id="herMessage" name="message" placeholder=" "></textarea>
+        <input type="hidden" name="from_name" value="Kiwi" />
+        <input type="hidden" name="to_name" value="Pupbeans" />
+        <input type="hidden" name="reply_email" value="potatoxanxan@gmail.com" />
+        <button type="submit">Ratify 💖</button>
+      </form>
+      <p id="ratifiedMessage" style="font-style: italic;"></p>
+      <button onclick="prevPage()">←</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
